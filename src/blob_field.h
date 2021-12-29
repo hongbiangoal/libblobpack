@@ -27,11 +27,15 @@
 #define BLOB_FIELD_ALIGN    4
 #define BLOB_FIELD_HAS_NAME 0x80000000
 
+
+#ifndef BLOB_FIELD_DEF_TAG
+#define BLOB_FIELD_DEF_TAG
 // a blob attribute header 
 struct blob_field {
 	uint32_t id_len;
 	char data[];
 } __packed;
+#endif
 
 struct blob_field_policy {
 	const char *name;
