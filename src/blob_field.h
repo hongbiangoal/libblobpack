@@ -34,7 +34,7 @@
 struct blob_field {
 	uint32_t id_len;
 	char data[];
-} __packed;
+} __attribute__ ((__packed__));
 #endif
 
 struct blob_field_policy {
